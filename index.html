@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa+</title>
+    <!-- Le lien vers notre futur fichier de style (CSS) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- L'écran de connexion (Profil) -->
+    <div id="login-screen">
+        <h1>Rosa+</h1>
+        <h2>Qui est prêt à se souvenir ?</h2>
+        <div class="profile" onclick="entrerSurLeSite()">
+            <img src="https://via.placeholder.com/150" alt="Profil de Rosa">
+            <p>Rosa</p>
+        </div>
+    </div>
+
+    <!-- Le catalogue principal (caché au début) -->
+    <div id="main-content" style="display: none;">
+        
+        <!-- Barre de navigation -->
+        <nav>
+            <h2 class="logo">Rosa+</h2>
+        </nav>
+
+        <!-- Bannière principale à la Une -->
+        <header class="hero-banner">
+            <div class="hero-content">
+                <h1>Joyeux Anniversaire !</h1>
+                <p>Une année de plus, une infinité de souvenirs.</p>
+                <button class="play-btn">▶ Lecture</button>
+            </div>
+        </header>
+
+        <!-- Les rangées de catégories -->
+        <section class="catalog">
+            
+            <div class="category-row">
+                <h3>Ma Famille</h3>
+                <div class="carousel">
+                    <div class="movie-card">Souvenir 1</div>
+                    <div class="movie-card">Souvenir 2</div>
+                    <div class="movie-card">Souvenir 3</div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h3>Friends</h3>
+                <div class="carousel">
+                    <div class="movie-card">La Vidéo Surprise</div>
+                    <div class="movie-card">Souvenir 2</div>
+                    <div class="movie-card">Souvenir 3</div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h3>Love Story</h3>
+                <div class="carousel">
+                    <div class="movie-card">Amsterdam & Efteling</div>
+                    <div class="movie-card">Souvenir 2</div>
+                    <div class="movie-card">Souvenir 3</div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Notre petit script magique pour passer de l'écran de profil au catalogue -->
+    <script>
+        function entrerSurLeSite() {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
