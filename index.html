@@ -4,78 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosa+</title>
-    <!-- Le lien vers notre futur fichier de style (CSS) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- L'écran de connexion (Profil) -->
+    <!-- Écran de Profil -->
     <div id="login-screen">
-        <h1>Rosa+</h1>
-        <h2>Qui est prêt à se souvenir ?</h2>
-        <div class="profile" onclick="entrerSurLeSite()">
-            <img src="https://via.placeholder.com/150" alt="Profil de Rosa">
-            <p>Rosa</p>
+        <h1 class="logo-rosa font-disney">Rosa<span class="plus-sign">+</span></h1>
+        <h2>Qui est prêt à regarder ?</h2>
+        <div class="profiles-container">
+            <div class="profile" onclick="entrerSurLeSite()">
+                <img src="image_15db2c.jpg" alt="Profil de Rosa">
+                <p>Rosa</p>
+            </div>
         </div>
     </div>
 
-    <!-- Le catalogue principal (caché au début) -->
-    <div id="main-content" style="display: none;">
-        
-        <!-- Barre de navigation -->
-        <nav>
-            <h2 class="logo">Rosa+</h2>
-        </nav>
-
-        <!-- Bannière principale à la Une -->
-        <header class="hero-banner">
-            <div class="hero-content">
-                <h1>Joyeux Anniversaire !</h1>
-                <p>Une année de plus, une infinité de souvenirs.</p>
-                <button class="play-btn">▶ Lecture</button>
-            </div>
-        </header>
-
-        <!-- Les rangées de catégories -->
-        <section class="catalog">
-            
-            <div class="category-row">
-                <h3>Ma Famille</h3>
-                <div class="carousel">
-                    <div class="movie-card">Souvenir 1</div>
-                    <div class="movie-card">Souvenir 2</div>
-                    <div class="movie-card">Souvenir 3</div>
-                </div>
-            </div>
-
-            <div class="category-row">
-                <h3>Friends</h3>
-                <div class="carousel">
-                    <div class="movie-card">La Vidéo Surprise</div>
-                    <div class="movie-card">Souvenir 2</div>
-                    <div class="movie-card">Souvenir 3</div>
-                </div>
-            </div>
-
-            <div class="category-row">
-                <h3>Love Story</h3>
-                <div class="carousel">
-                    <div class="movie-card">Amsterdam & Efteling</div>
-                    <div class="movie-card">Souvenir 2</div>
-                    <div class="movie-card">Souvenir 3</div>
-                </div>
-            </div>
-
-        </section>
+    <!-- Écran d'intro cinématique -->
+    <div id="intro-screen" style="display: none;">
+        <h1 class="intro-logo font-disney">Rosa<span class="plus-sign">+</span></h1>
     </div>
 
-    <!-- Notre petit script magique pour passer de l'écran de profil au catalogue -->
-    <script>
-        function entrerSurLeSite() {
-            document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-        }
-    </script>
+    <!-- Le Catalogue -->
+    <div id="main-content" style="display: none;">
+        
+        <!-- Navbar style Disney+ (Mise à jour avec icônes) -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <h2 class="nav-logo-text font-disney">Rosa<span class="plus-sign">+</span></h2>
+                <div class="nav-links">
+                    <a href="#">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        <span>ACCUEIL</span>
+                    </a>
+                    <a href="#">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                        <span>SOUVENIRS</span>
+                    </a>
+                    <a href="#">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                        <span>SURPRISES</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <a href="#" onclick="retourAuProfil()" class="profile-switch-btn"><span>CHANGER DE PROFIL</span></a>
+            </div>
+        </nav>
 
+        <!-- Barre de filtres en "Pilules" (Style Disney+) -->
+        <div class="sub-nav-pills">
+            <div class="pill active">Pour vous</div>
+            <div class="pill">Souvenirs</div>
+            <div class="pill">Vidéos</div>
+            <div class="pill">Galerie</div>
+        </div>
+
+        <!-- Grande Affiche -->
+        <div class="hero-slider">
+            <div class="hero-image">
+                <div class="hero-content">
+                    <h1>Joyeux Anniv' Rosa</h1>
+                    <p>Un film original • 2026 • Émotion garantie</p>
+                    <div class="hero-buttons">
+                        <button class="play-btn"><img src="https://img.icons8.com/ios-filled/50/000000/play--v1.png" width="20" alt="Lecture"> LECTURE</button>
+                        <button class="add-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Les Studios -->
+        <div class="brand-container">
+            <div class="brand-box"><p>MA FAMILLE</p></div>
+            <div class="brand-box"><p>FRIENDS</p></div>
+            <div class="brand-box"><p>LOVE STORY</p></div>
+            <div class="brand-box"><p>VOYAGES</p></div>
+        </div>
+
+        <!-- Les rangées de films -->
+        <div class="catalog-section">
+            <h4>Recommandé pour vous</h4>
+            <div class="carousel">
+                <div class="movie-card"><p>Bruges</p></div>
+                <div class="movie-card"><p>Bivouac Suisse</p></div>
+                <div class="movie-card"><p>Amsterdam</p></div>
+                <div class="movie-card"><p>Busan</p></div>
+                <div class="movie-card"><p>Efteling</p></div>
+            </div>
+            
+            <h4>Les Classiques</h4>
+            <div class="carousel">
+                <div class="movie-card"><p>Souvenir 1</p></div>
+                <div class="movie-card"><p>Souvenir 2</p></div>
+                <div class="movie-card"><p>Souvenir 3</p></div>
+                <div class="movie-card"><p>Souvenir 4</p></div>
+                <div class="movie-card"><p>Souvenir 5</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
