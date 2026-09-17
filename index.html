@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Le Curseur Magique (L'aura brillante) -->
+    <!-- Le Curseur Magique -->
     <div id="magic-cursor"></div>
 
     <!-- Écran de Profil -->
@@ -17,8 +17,8 @@
         <h2>Qui est prêt à regarder ?</h2>
         <div class="profiles-container">
             <div class="profile" onclick="entrerSurLeSite()">
-                <!-- TON IMAGE DE PROFIL -->
-                <img src="image_15db2c.jpg" alt="Profil de Rosa">
+                <!-- Assure-toi que l'image sur ton GitHub s'appelle EXACTEMENT comme ça, tout en minuscules -->
+                <img src="Rosa+ 1.png" alt="Profil de Rosa">
                 <p>Rosa</p>
             </div>
         </div>
@@ -29,11 +29,10 @@
         <h1 class="intro-logo font-disney">Rosa<span class="plus-sign">+</span></h1>
     </div>
 
-    <!-- La Fenêtre Secrète Cinéma (Modale pour Vidéos/Photos) -->
+    <!-- La Fenêtre Secrète Cinéma -->
     <div id="media-modal" style="display: none;">
         <div class="modal-content">
             <span class="close-btn" onclick="fermerModal()">×</span>
-            <!-- La vidéo ou l'image apparaîtra ici par magie -->
             <div id="modal-body"></div>
         </div>
     </div>
@@ -70,7 +69,6 @@
                     <h1>Joyeux Anniv' Rosa</h1>
                     <p>Un film original • 2026 • Émotion garantie</p>
                     <div class="hero-buttons">
-                        <!-- J'ai connecté le bouton lecture à une vidéo d'exemple ! -->
                         <button class="play-btn" onclick="ouvrirModal('video', 'surprise.mp4')"><img src="https://img.icons8.com/ios-filled/50/000000/play--v1.png" width="20" alt="Lecture"> LECTURE</button>
                         <button class="add-btn">+</button>
                     </div>
@@ -82,13 +80,11 @@
         <div class="catalog-section">
             <h4>Ma Famille</h4>
             <div class="carousel">
-                <!-- LE SECRET EST ICI : onclick="ouvrirModal('type', 'nom_du_fichier')" -->
-                <div class="movie-card" onclick="ouvrirModal('video', 'video_famille_1.mp4')"><p>▶ Vidéo Famille</p></div>
-                <div class="movie-card" onclick="ouvrirModal('video', 'video_famille_2.mp4')"><p>▶ Vidéo Famille</p></div>
-                <div class="movie-card" onclick="ouvrirModal('photo', 'photo_famille_1.jpg')"><p>📷 Photo Famille</p></div>
-                <div class="movie-card" onclick="ouvrirModal('photo', 'photo_famille_2.jpg')"><p>📷 Photo Famille</p></div>
-                <div class="movie-card"><p>Souvenir 3</p></div>
-                <div class="movie-card"><p>Souvenir 4</p></div>
+                <!-- Les noms ici correspondent EXACTEMENT aux fichiers que tu m'as envoyés -->
+                <div class="movie-card" onclick="ouvrirModal('video', 'video_famille_1.mp4')"><p>▶ Vidéo Bébé</p></div>
+                <div class="movie-card" onclick="ouvrirModal('video', 'video_famille_2.mp4')"><p>▶ Vidéo Bowling</p></div>
+                <div class="movie-card" onclick="ouvrirModal('photo', 'photo_famille_1.jpg.jpeg')"><p>📷 Photo Groupe</p></div>
+                <div class="movie-card" onclick="ouvrirModal('photo', 'photo_famille_2.jpg.jpeg')"><p>📷 Photo Anniv'</p></div>
             </div>
             
             <h4>Recommandé pour vous</h4>
@@ -102,7 +98,6 @@
         </div>
     </div>
 
-    <!-- Script relié -->
     <script src="script.js"></script>
 </body>
 </html>
